@@ -25,12 +25,11 @@ brew install gnu-sed --with-default-names
 # Install a modern version of Bash.
 brew install bash
 brew install bash-completion2
+# Install zsh
+brew install zsh
 
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/bash";
-fi;
+# Switch to using zsh as default shell
+chsh -s /bin/zsh;
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
@@ -40,11 +39,13 @@ brew install gnupg
 
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
+brew install nvim
 brew install grep
 brew install openssh
-brew install screen
+brew install tmux
 brew install php
 brew install gmp
+brew install fd
 
 # Install font tools.
 brew tap bramstein/webfonttools
