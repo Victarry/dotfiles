@@ -127,7 +127,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	gpgsign = false
 
 [diff]
 
@@ -178,6 +178,6 @@
 
 	insteadOf = "gist:"
 
-[init]
-
-	defaultBranch = main
+[user]
+	username = "Zhenhuan Liu"
+	email = nkulzh16@gmail.com
