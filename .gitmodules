@@ -4,3 +4,6 @@
 [submodule ".vim/pack/vendor/start/vim-easymotion"]
 	path = .vim/pack/vendor/start/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion
+[submodule ".vim/pack/vendor/start/nerdtree"]
+	path = .vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
