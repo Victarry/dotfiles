@@ -100,6 +100,9 @@ if exists("&relativenumber")
 	au BufReadPost * set relativenumber
 endif
 
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -177,8 +180,8 @@ map <leader>bd :Bclose<cr>:tabclose<cr>gT
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
 
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
+" move across buffers
+nnoremap <C-N> :bnext<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
@@ -333,3 +336,8 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
