@@ -1,6 +1,39 @@
 " Make Vim more useful
 set nocompatible
 
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim-Plug Install
+if has('nvim')
+    if empty(glob('~/.config/nvim/autoload/plug.vim'))
+        silent !wget -P ~/.config/nvim/autoload/ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    endif
+else
+    if empty(glob('~/.vim/autoload/plug.vim'))
+     silent !wget -P ~/.vim/autoload/ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    endif
+endif
+" Vim Plugin Install
+" set plugin install directory
+call plug#begin('~/.vim/bundle')
+
+" Declare the list of plugins.
+Plug 'ctrlpvim/ctrlp.vim'
+
+Plug 'bling/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+
+Plug 'scrooloose/nerdTree'
+
+Plug 'easymotion/vim-easymotion'
+
+Plug 'ryanoasis/vim-devicons' " Always load this as the last one
+
+" end call for vim-plug
+call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
