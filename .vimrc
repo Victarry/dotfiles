@@ -26,6 +26,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'bling/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 
+Plug 'preservim/nerdcommenter'
+
 Plug 'scrooloose/nerdTree'
 
 Plug 'easymotion/vim-easymotion'
