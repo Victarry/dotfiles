@@ -32,6 +32,10 @@ Plug 'scrooloose/nerdTree'
 
 Plug 'easymotion/vim-easymotion'
 
+Plug 'tpope/vim-fugitive'
+
+Plug 'dense-analysis/ale'
+
 Plug 'ryanoasis/vim-devicons' " Always load this as the last one
 
 " end call for vim-plug
