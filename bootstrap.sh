@@ -12,6 +12,10 @@ function doIt() {
 	source ~/.bash_profile;
 }
 
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt;
 else
