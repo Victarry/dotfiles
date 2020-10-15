@@ -34,7 +34,7 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'tpope/vim-fugitive'
 
-Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'ryanoasis/vim-devicons' " Always load this as the last one
 
