@@ -36,8 +36,9 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'ryanoasis/vim-devicons' " Always load this as the last one
+" Plug 'ryanoasis/vim-devicons' " Always load this as the last one
 
+" Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 " end call for vim-plug
 call plug#end()
 
@@ -373,3 +374,16 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
+
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
